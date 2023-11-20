@@ -1,0 +1,11 @@
+"0","visualize$`color-by-column` <- TRUE
+visualize$`color-by-column` <- TRUE
+visualize$`color-category`$map <- colors
+visualize$tooltip$body <- ""{{petallength}}""
+dw_edit_chart(my_new_chart$id, 
+              visualize = visualize,
+              axes = axes)
+"
+"2","Chart X9L8W succesfully updated.
+
+"

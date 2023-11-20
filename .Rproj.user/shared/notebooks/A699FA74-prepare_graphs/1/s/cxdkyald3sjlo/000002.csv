@@ -1,0 +1,59 @@
+"0","```r
+imports_no_ue <- 
+  read_csv(here(\"data/imports_no_ue_gas.csv\"))
+
+```"
+"1","Rows: 829160 Columns: 8── Column specification ────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr  (6): partner, unit, geo, siec, iso_partner, partner_name
+dbl  (1): values
+date (1): time
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+imports_no_ue <- 
+  read_csv(here(\"data/imports_no_ue_gas.csv\"))
+```"
+"1","Rows: 829160 Columns: 8── Column specification ────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr  (6): partner, unit, geo, siec, iso_partner, partner_name
+dbl  (1): values
+date (1): time
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+imports_all <- 
+  read_csv(here(\"data/imports_all.csv\"))
+```"
+"1","Rows: 1588972 Columns: 8── Column specification ────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr  (6): partner, unit, geo, siec, iso_partner, partner_name
+dbl  (1): values
+date (1): time
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+bruegel_gas_raw <- 
+  read_csv(\"data_raw/bruegel_data/route_data_2022-09-13.csv\")
+```"
+"1","New names:
+* `` -> ...1
+Rows: 54 Columns: 20── Column specification ────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+dbl (20): ...1, week, Nord Stream_min, Nord Stream_max, Nord Stream_2020, Nord Strea...
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+bruegel_gas_imports_raw <- 
+  read_csv(\"data_raw/bruegel_data/country_data_2022-09-13.csv\")
+```"
+"1","Rows: 54 Columns: 30── Column specification ────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+dbl (30): week, EU_min, EU_max, EU_2020, EU_2021, EU_2022, Russia_min, Russia_max, R...
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"

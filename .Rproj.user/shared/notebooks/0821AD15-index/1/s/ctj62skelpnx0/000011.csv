@@ -1,0 +1,9 @@
+"0","dw_test_key()
+"
+"2","Request failed [403]. Retrying in 1.4 seconds...
+"
+"2","Request failed [403]. Retrying in 1 seconds...
+"
+"2","Error in dw_call_api(""GET"", ""https://api.datawrapper.de/v3/me"", httr::add_headers(Authorization = paste(""Bearer"",  : 
+  There has been an error in an API call. Statuscode of the response: 403TRUE
+"

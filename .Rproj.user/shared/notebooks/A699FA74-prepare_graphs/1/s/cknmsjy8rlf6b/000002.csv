@@ -1,0 +1,17 @@
+"0","```r
+demanda %>% 
+    mutate(
+         country = countrycode(country_code, 
+                               origin = \"iso3c\", 
+                               destination = \"cldr.short.es\"), 
+         year = ifelse(as.numeric(month) <= 3, 2022, 2023), 
+         month = fct_recode(month, 
+                            `march` = \"mar\"),
+         date = ym(str_glue(\"{year}-{str_to_title(month)}\")), 
+         monthly_demand = monthly_demand/1000) %>% 
+  pivot_wider(id_cols = date, names_from = country, values_from = monthly_demand) %>% 
+  dw_data_to_chart(\"khSwN\")
+
+```"
+"1","Data in khSwN successfully updated.
+"

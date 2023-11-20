@@ -1,0 +1,65 @@
+/*-- scss:defaults --*/
+  
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@200;300;400;500;600;700');
+
+
+$body-bg: #ffffff;
+$body-color: #343434;
+$link-color: #1e81a2;
+$font-family-sans-serif: 'Quicksand', sans-serif !default;
+$font-family-sans-serif: 'Quicksand', sans-serif !default;
+
+
+$presentation-heading-color: #1e81a2 !default; // color headings
+$presentation-heading-font-weight: bold !default;
+$presentation-h1-font-size: 2em !default;	
+$h1-font-size: 5.8em !default;
+$h2-font-size: 1.5em !default;
+$code-block-bg: #ffffff !default;
+$code-block-border-color: lighten($body-color, 30%) !default;
+$code-block-bg-padding: 3em;
+
+/*-- scss:rules --*/
+  
+.reveal .slide blockquote {
+    border-left: 3px solid $text-muted;
+    padding-left: 0.5em;
+}
+
+h2 {
+  background-color: #1e81a2;
+  color: white !important;
+  padding: 10px;
+}
+
+p {
+  font-weight: 300;
+}
+
+li {
+  font-weight: 200;
+}
+
+.column p {
+  font-size: 0.8em;
+}
+
+strong {
+  color: #1e81a2;
+}
+
+h1.title {
+  text-align: left;
+}
+
+.quarto-title-authors {
+  display: inline !important;
+  padding-left: 0 !important;
+  color: #ababab;
+  text-align: left;
+}
+
+div.cell-code {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}

@@ -1,0 +1,7 @@
+"0","iris %>% 
+  clean_names() %>% 
+  dw_data_to_chart(my_first_dw_id) 
+"
+"2","Data in 922sN successfully updated.
+
+"

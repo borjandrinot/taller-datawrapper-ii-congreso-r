@@ -1,0 +1,45 @@
+"0","```r
+process_year <- function(path){
+  
+  capacidad_raw <-
+    read_delim(path, 
+               delim = \";\") %>% 
+    clean_names()
+  
+  year <- str_extract(path, \"\\d{4}-\\d{2}-\\d{2}\")
+  
+  capacidad <- 
+    capacidad_raw %>% 
+    mutate(country_code = countrycode(name, 
+                                      origin = \"country.name.en\", 
+                                      destination = \"iso3c\"), 
+           country_code = case_when(name == \"EU\" ~ \"UE\", 
+                                    name == \"Non-EU\" ~ \"Fuera UE\", 
+                                    T ~ country_code), 
+           country = countrycode(country_code, 
+                                 origin = \"iso3c\", 
+                                 destination = \"cldr.short.es\"), 
+           country = case_when(name == \"EU\" ~ \"UE\", 
+                               name == \"Non-EU\" ~ \"Fuera UE\", 
+                               T ~ country), 
+           year = year) %>% 
+    select(year, country_code, country, gas_in_storage_t_wh, full_percent)
+  
+  return(capacidad)
+  
+}
+
+
+all_data <- 
+  dir_ls(here(\"data_raw/capacidad_otros_2016_2022/\")) %>% 
+  map_df(process_year)
+
+
+all_data %>% 
+  filter(country != \"RU\") %>% 
+  pivot_wider(id_cols = year, 
+              names_from = country, 
+              values_from = full_percent) %>% 
+  dw_data_to_chart(\"oBc3Y\")
+
+```"
